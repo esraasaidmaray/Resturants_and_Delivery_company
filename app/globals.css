@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background: #fbf8f1;
+  color: #06351c;
+}
+
+/* Custom Chips */
+.chip {
+  @apply rounded-2xl border px-4 py-2.5 text-sm font-semibold transition-all duration-200 flex items-center gap-2 cursor-pointer select-none active:scale-[0.98];
+}
+
+.chip-idle {
+  @apply border-sand-200 bg-white text-palm-900 shadow-sm hover:border-palm-500 hover:bg-palm-50/50 hover:shadow;
+}
+
+.chip-on {
+  @apply border-palm-600 bg-gradient-to-r from-palm-600 to-palm-700 text-white shadow-md shadow-palm-600/20 scale-[1.02];
+}
+
+/* Scrollbar Hide */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f4ead4;
+}
+::-webkit-scrollbar-thumb {
+  background: #006c35;
+  border-radius: 4px;
+}
+
